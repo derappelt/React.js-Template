@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, Link, browserHistory } from 'react-router';
 
 import Hello from './hello.jsx';
 import World from './world.jsx';
@@ -7,13 +8,13 @@ import World from './world.jsx';
 
 class App extends React.Component {
   render() {
-    var app = (
-      <div>
-        <Hello/>
-        <World/>
-      </div>
+    return (
+      <Router history={browserHistory}>
+        <Route path="/" component={Hello}>
+          <Route path="world" component={World}/>
+        </Route>
+      </Router>
     );
-    return app;
   }
 }
 
