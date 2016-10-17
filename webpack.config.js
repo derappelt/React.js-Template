@@ -4,6 +4,11 @@ var webpack = require('webpack');
 module.exports = {
   entry: './src/app.jsx',
   output: { path: __dirname, filename: 'dist/bundle.js' },
+  devServer: {
+    contentBase: "./",
+    hot: true,
+    historyApiFallback: true
+  },
   module: {
     loaders: [
       {
@@ -16,4 +21,12 @@ module.exports = {
       }
     ]
   },
+  externals:{
+    xmlhttprequest: '{XMLHttpRequest:XMLHttpRequest}'
+  },
+    plugins: [
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+      })
+    ]
 };
