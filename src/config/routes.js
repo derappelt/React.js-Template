@@ -13,6 +13,7 @@ const NotFound = () => (
 
   <Route path='/' component={Main}>
     <IndexRoute />
+    <Route path='*' component={NotFound} />
   </Route>
 );
 
