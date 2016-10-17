@@ -5,6 +5,8 @@ var Route = ReactRouter.Route;
 var IndexRoute = ReactRouter.IndexRoute;
 
 var Main = require('../components/main.jsx');
+var Hello = require('../components/hello.jsx');
+var World = require('../components/world.jsx');
 
 const NotFound = () => (
   <h1>404.. This page is not found!</h1>)
@@ -12,7 +14,8 @@ const NotFound = () => (
   var routes = (
 
   <Route path='/' component={Main}>
-    <IndexRoute />
+    <IndexRoute component={Hello} />
+    <Route path="world" component={World} />
     <Route path='*' component={NotFound} />
   </Route>
 );

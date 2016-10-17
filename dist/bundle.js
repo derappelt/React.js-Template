@@ -27092,6 +27092,8 @@
 	var IndexRoute = ReactRouter.IndexRoute;
 
 	var Main = __webpack_require__(236);
+	var Hello = __webpack_require__(237);
+	var World = __webpack_require__(238);
 
 	var NotFound = function NotFound() {
 	  return React.createElement(
@@ -27104,7 +27106,9 @@
 	var routes = React.createElement(
 	  Route,
 	  { path: '/', component: Main },
-	  React.createElement(IndexRoute, null)
+	  React.createElement(IndexRoute, { component: Hello }),
+	  React.createElement(Route, { path: 'world', component: World }),
+	  React.createElement(Route, { path: '*', component: NotFound })
 	);
 
 	module.exports = routes;
@@ -27141,6 +27145,10 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	var ReactRouter = __webpack_require__(172);
+	var Router = ReactRouter.Router;
+	var Link = ReactRouter.Link;
+
 	var Main = function (_React$Component) {
 	  _inherits(Main, _React$Component);
 
@@ -27156,8 +27164,17 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_hello2.default, null),
-	        _react2.default.createElement(_world2.default, null)
+	        _react2.default.createElement(
+	          Link,
+	          { to: '/' },
+	          'Hello'
+	        ),
+	        _react2.default.createElement(
+	          Link,
+	          { to: '/world' },
+	          'World'
+	        ),
+	        this.props.children
 	      );
 	    }
 	  }]);
@@ -27172,10 +27189,6 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -27221,17 +27234,13 @@
 	  return Hello;
 	}(_react2.default.Component);
 
-	exports.default = Hello;
+	module.exports = Hello;
 
 /***/ },
 /* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	      value: true
-	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -27277,7 +27286,7 @@
 	      return World;
 	}(_react2.default.Component);
 
-	exports.default = World;
+	module.exports = World;
 
 /***/ }
 /******/ ]);
