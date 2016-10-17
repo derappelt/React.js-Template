@@ -1,20 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, hashHistory } from 'react-router';
+import routes from './config/routes';
 
-import Hello from './hello.jsx';
-import World from './world.jsx';
-
-
-class App extends React.Component {
-  render() {
-    var app = (
-      <div>
-        <Hello/>
-        <World/>
-      </div>
-    );
-    return app;
-  }
-}
-
-ReactDOM.render(<App/>, document.getElementById('app'));
+ReactDOM.render(
+  <Router history={hashHistory}>{routes}</Router>,
+  document.getElementById('app')
+)

@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default class Hello extends React.Component {
+export default class World extends React.Component {
   render() {
-    var style = {
+    var style = {
       display: 'inline-block'
     };
-    return <h1 style={style}>Hello</h1>
+    return <h1 style={style}>World</h1>
   }
 }
