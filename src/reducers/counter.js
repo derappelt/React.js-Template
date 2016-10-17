@@ -1,6 +1,4 @@
-const initialState = 0;
-
-export default function counter (state = initialState, action){
+export default function counter (state = 0, action){
   switch (action.type) {
     case 'INCREMENT':
       return state + 1;
