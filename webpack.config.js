@@ -4,6 +4,7 @@ var webpack = require('webpack');
 module.exports = {
   entry: './src/app.jsx',
   output: { path: __dirname, filename: 'dist/bundle.js' },
+  devtool: "#inline-source-map",
   devServer: {
     contentBase: "./",
     hot: true,
