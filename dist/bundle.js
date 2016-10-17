@@ -46,18 +46,26 @@
 
 	'use strict';
 
-	var React = __webpack_require__(1);
-	var ReactDOM = __webpack_require__(34);
-	var ReactRouter = __webpack_require__(172);
-	var Router = ReactRouter.Router;
-	var routes = __webpack_require__(235);
-	// var browserHistory = ReactRouter.browserHistory;
-	var hashHistory = ReactRouter.hashHistory;
+	var _react = __webpack_require__(1);
 
-	ReactDOM.render(React.createElement(
-	  Router,
-	  { history: hashHistory },
-	  routes
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(34);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _routes = __webpack_require__(235);
+
+	var _routes2 = _interopRequireDefault(_routes);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	_reactDom2.default.render(_react2.default.createElement(
+	  _reactRouter.Router,
+	  { history: _reactRouter.hashHistory },
+	  _routes2.default
 	), document.getElementById('app'));
 
 /***/ },
@@ -26976,30 +26984,42 @@
 
 	'use strict';
 
-	var React = __webpack_require__(1);
-	var ReactRouter = __webpack_require__(172);
-	var Router = ReactRouter.Router;
-	var Route = ReactRouter.Route;
-	var IndexRoute = ReactRouter.IndexRoute;
+	var _react = __webpack_require__(1);
 
-	var Main = __webpack_require__(236);
-	var Hello = __webpack_require__(237);
-	var World = __webpack_require__(238);
+	var _react2 = _interopRequireDefault(_react);
 
-	var NotFound = function NotFound() {
-	  return React.createElement(
-	    'h1',
-	    null,
-	    '404.. This page is not found!'
-	  );
-	};
+	var _reactDom = __webpack_require__(34);
 
-	var routes = React.createElement(
-	  Route,
-	  { path: '/', component: Main },
-	  React.createElement(IndexRoute, { component: Hello }),
-	  React.createElement(Route, { path: 'world', component: World }),
-	  React.createElement(Route, { path: '*', component: NotFound })
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _main = __webpack_require__(236);
+
+	var _main2 = _interopRequireDefault(_main);
+
+	var _hello = __webpack_require__(237);
+
+	var _hello2 = _interopRequireDefault(_hello);
+
+	var _world = __webpack_require__(238);
+
+	var _world2 = _interopRequireDefault(_world);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var NotFound = _react2.default.createElement(
+	  'h1',
+	  null,
+	  '404.. This page is not found!'
+	);
+
+	var routes = _react2.default.createElement(
+	  _reactRouter.Route,
+	  { path: '/', component: _main2.default },
+	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _hello2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'world', component: _world2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '*', component: NotFound })
 	);
 
 	module.exports = routes;
@@ -27010,6 +27030,10 @@
 
 	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
@@ -27019,6 +27043,8 @@
 	var _reactDom = __webpack_require__(34);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _reactRouter = __webpack_require__(172);
 
 	var _hello = __webpack_require__(237);
 
@@ -27036,10 +27062,6 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var ReactRouter = __webpack_require__(172);
-	var Router = ReactRouter.Router;
-	var Link = ReactRouter.Link;
-
 	var Main = function (_React$Component) {
 	  _inherits(Main, _React$Component);
 
@@ -27056,12 +27078,12 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(
-	          Link,
+	          _reactRouter.Link,
 	          { to: '/' },
 	          'Hello'
 	        ),
 	        _react2.default.createElement(
-	          Link,
+	          _reactRouter.Link,
 	          { to: '/world' },
 	          'World'
 	        ),
@@ -27073,13 +27095,17 @@
 	  return Main;
 	}(_react2.default.Component);
 
-	module.exports = Main;
+	exports.default = Main;
 
 /***/ },
 /* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -27125,13 +27151,17 @@
 	  return Hello;
 	}(_react2.default.Component);
 
-	module.exports = Hello;
+	exports.default = Hello;
 
 /***/ },
 /* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	      value: true
+	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -27177,7 +27207,7 @@
 	      return World;
 	}(_react2.default.Component);
 
-	module.exports = World;
+	exports.default = World;
 
 /***/ }
 /******/ ]);

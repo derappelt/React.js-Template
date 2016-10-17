@@ -1,18 +1,16 @@
-var React = require('react');
-var ReactRouter = require('react-router');
-var Router = ReactRouter.Router;
-var Route = ReactRouter.Route;
-var IndexRoute = ReactRouter.IndexRoute;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Router, Route, IndexRoute} from 'react-router';
 
-var Main = require('../components/main.jsx');
-var Hello = require('../components/hello.jsx');
-var World = require('../components/world.jsx');
+import Main from '../components/main.jsx';
+import Hello from '../components/hello.jsx';
+import World from '../components/world.jsx';
 
-const NotFound = () => (
-  <h1>404.. This page is not found!</h1>)
+const NotFound = (
+  <h1>404.. This page is not found!</h1>
+);
 
-  var routes = (
-
+var routes = (
   <Route path='/' component={Main}>
     <IndexRoute component={Hello} />
     <Route path="world" component={World} />

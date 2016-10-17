@@ -1,16 +1,13 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-var ReactRouter = require('react-router');
-var Router = ReactRouter.Router;
-var Link = ReactRouter.Link;
+import { Router, Link} from 'react-router';
 
 import Hello from './hello.jsx';
 import World from './world.jsx';
 
 
-class Main extends React.Component {
+export default class Main extends React.Component {
   render() {
     return (
       <div>
@@ -21,5 +18,3 @@ class Main extends React.Component {
     );
   }
 }
-
-module.exports = Main;
