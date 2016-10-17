@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './src/app.jsx',
+  entry: './src/app/app.jsx',
   output: { path: __dirname, filename: 'dist/bundle.js' },
   devServer: {
     contentBase: "./",
@@ -18,6 +18,10 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      },
+      {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
       }
     ]
   },
